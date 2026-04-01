@@ -1,0 +1,8 @@
+{
+	"appId": "com.machinerent3d.app",
+	"appName": "MachineRent 3D",
+	"webDir": "dist",
+	"server": {
+		"androidScheme": "https"
+	}
+}
