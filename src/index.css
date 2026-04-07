@@ -1,26 +1,38 @@
 @import "tailwindcss";
 
 @theme {
+  --color-primary-bg: #1a1a3a;
+  --color-secondary-bg: #0d0d21;
+  --color-accent-purple: #9d50ff;
+  --color-accent-yellow: #ffcc00;
+  --color-accent-green: #00c853;
   --color-neon-cyan: #06b6d4;
-  --color-neon-purple: #a855f7;
+  --color-neon-purple: #9d50ff;
   --color-neon-pink: #ec4899;
-  --color-neon-amber: #f59e0b;
+  --color-neon-amber: #ffcc00;
 }
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #050505;
+  background: linear-gradient(to bottom, #1a1a3a, #0d0d21);
+  background-attachment: fixed;
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.glass-card {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.card-white {
+  background: #ffffff;
   border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+}
+
+.card-light-gray {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 12px;
 }
 
 .neon-border-cyan {
@@ -34,13 +46,13 @@ body {
 }
 
 .neon-glow-purple {
-  box-shadow: 0 0 25px rgba(168, 85, 247, 0.2);
+  box-shadow: 0 0 25px rgba(157, 80, 255, 0.2);
 }
 
 .bottom-nav-glass {
-  background: rgba(10, 10, 10, 0.8);
-  backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05);
 }
 
 @keyframes pulse-neon {

@@ -40,11 +40,13 @@
         "id": { "type": "string" },
         "userId": { "type": "string" },
         "machineId": { "type": "string" },
+        "machineName": { "type": "string" },
+        "dailyIncome": { "type": "number" },
         "timestamp": { "type": "string", "format": "date-time" },
         "expiresAt": { "type": "string", "format": "date-time" },
         "lastCollectedAt": { "type": "string", "format": "date-time" }
       },
-      "required": ["userId", "machineId", "timestamp", "expiresAt", "lastCollectedAt"]
+      "required": ["userId", "machineId", "machineName", "dailyIncome", "timestamp", "expiresAt", "lastCollectedAt"]
     },
     "Transaction": {
       "title": "Financial Transaction",
@@ -56,8 +58,9 @@
         "type": { "type": "string", "enum": ["deposit", "withdraw"] },
         "amount": { "type": "number" },
         "status": { "type": "string", "enum": ["pending", "approved", "rejected"] },
-        "method": { "type": "string", "enum": ["Easypaisa", "OKX"] },
+        "method": { "type": "string", "enum": ["Easypaisa", "OKX", "Bank Transfer"] },
         "details": { "type": "string", "description": "Account number or wallet address" },
+        "txId": { "type": "string", "description": "Transaction ID or reference for deposits" },
         "timestamp": { "type": "string", "format": "date-time" }
       },
       "required": ["userId", "type", "amount", "status", "method", "details", "timestamp"]
